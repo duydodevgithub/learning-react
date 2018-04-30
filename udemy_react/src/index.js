@@ -7,7 +7,7 @@ class Counter extends React.Component {
         count: 1
     }
 
-    // why does addOne does not work?
+    // why does "this" in addOne does not work?
     
     addOne() {
         console.log(this.state.count);
