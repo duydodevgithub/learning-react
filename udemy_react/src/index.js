@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Addalert from "./component";
 
 
 class Counter extends React.Component {
@@ -8,15 +9,20 @@ class Counter extends React.Component {
     }
 
     // why does "this" in addOne does not work?
-    
-    addOne() {
-        console.log(this.state.count);
+    addOne = () => {
+        console.log(this);
+        this.setState((prev) => ({count: prev.count + 1}) )
     }
 
     // minusOne works
     minusOne = () => {
-        console.log(this.state.count);
+        this.setState((prev) => ({count: prev.count -1}))
     }
+
+    reset = () => {
+        this.setState({count: 0})
+    }
+   
     render() {
         return(
             <div>
