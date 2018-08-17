@@ -64,6 +64,7 @@
       }
     }
 
+//todo reducer
     function todos (state = [], action) {
       switch(action.type) {
         case ADD_TODO :
@@ -78,6 +79,8 @@
       }
     }
 
+
+//goals reducer
     function goals (state = [], action) {
       switch(action.type) {
         case ADD_GOAL :
@@ -105,6 +108,7 @@
     })
 
     // DOM code
+
     function addTodo () {
       const input = document.getElementById('todo')
       const name = input.value
